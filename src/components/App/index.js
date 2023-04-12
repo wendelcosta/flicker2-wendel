@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import SearchPage from '../SearchPage'
 import SearchResults from '../SearchResults'
+import PhotoResults from '../PhotoResults'
 import './App.css'
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
 					<Route index element={<p>Enter a search to begin</p>} />
 					<Route path='/search/:queryText' element={<SearchResults />} />
 				</Route>
+				<Route path='/photo/:photoId' element={<PhotoResults />} />
 			</Routes>
 		</BrowserRouter>
 	)
